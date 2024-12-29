@@ -1,4 +1,4 @@
-# LLM-Dev
+# Fin-LLM
 Abstract:
 
 The rapid advancement in the field of Artificial Intelligence, particularly in Natural Language Processing (NLP), has opened new frontiers in analyzing and interpreting vast and complex data sets. This study proposes to explore the development of specialized Large Language Models (LLMs) for financial data analysis, an area where traditional NLP techniques face significant challenges due to the unique and intricate nature of financial language and data structures.
