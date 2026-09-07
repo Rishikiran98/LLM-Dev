@@ -1,0 +1,113 @@
+# Risk term lexicon grouped by category. Terms are matched case-insensitively
+# as whole words/phrases. Weights express how strongly a hit raises risk.
+# This is an original, project-maintained list; it is not the Loughran-McDonald
+# dictionary, which has its own license terms.
+credit:
+  weight: 1.0
+  terms:
+    - default
+    - defaulted
+    - covenant breach
+    - breached its debt covenants
+    - downgrade
+    - downgraded
+    - junk status
+    - distressed
+    - delinquencies
+    - delinquent
+    - non-performing
+    - loan losses
+    - loan loss provisions
+    - write-off
+    - writedown
+    - write-down
+    - impairment
+liquidity:
+  weight: 1.0
+  terms:
+    - liquidity concerns
+    - liquidity crunch
+    - cash burn
+    - going concern
+    - emergency capital raise
+    - drew down its entire credit facility
+    - bankruptcy
+    - insolvency
+    - insolvent
+    - restructuring
+    - refinancing risk
+    - negative free cash flow
+    - free cash flow turned negative
+legal_regulatory:
+  weight: 0.9
+  terms:
+    - lawsuit
+    - class-action
+    - class action
+    - litigation
+    - investigation
+    - probe
+    - subpoena
+    - fined
+    - penalty
+    - sanctions
+    - regulatory scrutiny
+    - compliance failures
+    - accounting irregularities
+    - accounting investigation
+    - restatement
+    - misled investors
+operational:
+  weight: 0.8
+  terms:
+    - supply chain disruptions
+    - production halt
+    - halt production
+    - halted production
+    - outage
+    - recall
+    - data breach
+    - cyberattack
+    - layoffs
+    - plant closure
+    - strike
+    - shortage
+    - resigned abruptly
+    - governance lapses
+market:
+  weight: 0.7
+  terms:
+    - recession
+    - downturn
+    - slowdown
+    - weak demand
+    - demand collapsed
+    - orders collapsed
+    - lost market share
+    - pricing pressure
+    - margin contraction
+    - margin contracted
+    - inflation surged
+    - volatility
+    - tariffs
+    - trade war
+    - currency headwinds
+    - plunged
+    - slumped
+    - collapsed
+guidance:
+  weight: 0.9
+  terms:
+    - cut its full-year outlook
+    - cut its revenue forecast
+    - lowered guidance
+    - cut guidance
+    - guidance cut
+    - profit warning
+    - warned
+    - missed earnings expectations
+    - missed expectations
+    - earnings miss
+    - suspended its dividend
+    - dividend cut
+    - suspend the dividend

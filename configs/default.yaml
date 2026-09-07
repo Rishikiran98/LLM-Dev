@@ -1,0 +1,38 @@
+# Default Fin-LLM configuration. Override any key with an environment variable
+# prefixed FINLLM_ (nested keys use double underscore), e.g.
+#   FINLLM_LLM__MODEL=claude-sonnet-5
+data:
+  text_column: text
+  label_column: label
+  test_size: 0.2
+  random_seed: 42
+
+baseline:
+  word_ngram_max: 2
+  char_ngram_range: [3, 5]
+  max_features: 50000
+  C: 4.0
+
+transformer:
+  base_model: ProsusAI/finbert
+  max_length: 128
+  epochs: 3
+  batch_size: 16
+  learning_rate: 2.0e-5
+
+risk:
+  sentiment_weight: 0.6
+  lexicon_weight: 0.4
+
+retrieval:
+  chunk_size: 400
+  chunk_overlap: 60
+  top_k: 5
+
+llm:
+  model: claude-opus-5
+  max_tokens: 4096
+  effort: medium
+
+paths:
+  artifacts_dir: artifacts
