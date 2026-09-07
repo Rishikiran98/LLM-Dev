@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finllm"
+version = "0.1.0"
+description = "Fin-LLM: financial-language sentiment, risk assessment, and LLM-assisted document analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Rishikiran98" }]
+keywords = ["finance", "nlp", "llm", "sentiment", "risk"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "pydantic>=2.0",
+  "pyyaml>=6.0",
+  "joblib>=1.3",
+  "typer>=0.9",
+]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+transformer = ["torch>=2.1", "transformers>=4.40", "datasets>=2.18", "accelerate>=0.28"]
+embeddings = ["sentence-transformers>=2.6"]
+api = ["fastapi>=0.110", "uvicorn>=0.29"]
+dev = ["pytest>=8", "ruff>=0.4", "httpx>=0.27"]
+all = ["finllm[llm,transformer,embeddings,api,dev]"]
+
+[project.scripts]
+finllm = "finllm.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/Rishikiran98/LLM-Dev"
+
+[tool.setuptools.packages.find]
+include = ["finllm*"]
+
+[tool.setuptools.package-data]
+finllm = ["resources/*.csv", "resources/*.yaml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+  "transformer: needs torch and transformers installed",
+  "network: needs outbound network access",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"finllm/cli.py" = ["B008"]

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Project artifacts
+artifacts/
+models/*.joblib
+models/transformer/
+data/raw/
+data/processed/
+*.log
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Secrets
+.env
